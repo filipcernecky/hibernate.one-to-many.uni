@@ -1,7 +1,9 @@
 package hibernate.demo;
 
+import hibernate.entity.Course;
 import hibernate.entity.Instructor;
 import hibernate.entity.InstructorDetail;
+import hibernate.entity.Review;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -14,6 +16,8 @@ public class DeleteInstructorDetailDemo {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Review.class)
                 .buildSessionFactory();
 
         // create session
@@ -24,7 +28,7 @@ public class DeleteInstructorDetailDemo {
             session.beginTransaction();
 
             // get the instructor detail object
-            int theId = 1;
+            int theId = 2;
             InstructorDetail tempInstructorDetail =
                     session.get(InstructorDetail.class, theId);
 

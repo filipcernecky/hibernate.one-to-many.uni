@@ -29,12 +29,12 @@ public class CreateCourseAndReviewsDemo {
             session.beginTransaction();
 
             // create a course
-            Course tempCourse = new Course("Stalker - find 3 Veles detectors for Novikov");
+            Course tempCourse = new Course("Get to magnezite plant underground");
 
             // add reviews
-            tempCourse.addReview(new Review("Great, now i can complete the quest."));
-            tempCourse.addReview(new Review("Still, you can buy them."));
-            tempCourse.addReview(new Review("Better get 4 of them. One for myself."));
+            tempCourse.addReview(new Review("Nice, glad that stalking is still active"));
+            tempCourse.addReview(new Review("Urbex wins"));
+            tempCourse.addReview(new Review("filthy trespassers"));
 
             // save the course
             System.out.println("Saving the course");

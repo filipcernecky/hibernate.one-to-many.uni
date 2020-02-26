@@ -13,7 +13,7 @@ public class Review {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "comemnt")
+    @Column(name = "comment")
     private String comment;
 
     // define constructors

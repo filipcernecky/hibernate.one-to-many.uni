@@ -3,6 +3,7 @@ package hibernate.demo;
 import hibernate.entity.Course;
 import hibernate.entity.Instructor;
 import hibernate.entity.InstructorDetail;
+import hibernate.entity.Review;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -16,6 +17,7 @@ public class DeleteCourseDemo {
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Review.class)
                 .buildSessionFactory();
 
         // create session
@@ -26,7 +28,7 @@ public class DeleteCourseDemo {
             session.beginTransaction();
 
             //get a course
-            int theId = 15;
+            int theId = 1;
             Course tempCourse = session.get(Course.class, theId);
 
             //delete a course
